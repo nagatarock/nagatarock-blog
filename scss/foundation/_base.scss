@@ -1,3 +1,15 @@
+html{
+    font-size: 62.5%;
+}
+
+hr{
+    background-color: $main_color;
+    height: 3px;
+    border:0;
+    margin: 0 auto;
+}
+
+// @mixinの設定 //
 @mixin breakpoint( $point ){
     @if $point == sma{
         @media (max-width: 750px){
@@ -9,11 +21,4 @@
         @content;
     }
 }
-}
-
-hr{
-    background-color: $main_color;
-    height: 2px;
-    border:0;
-    margin: 0 auto;
 }

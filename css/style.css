@@ -374,10 +374,37 @@ video {
   text-shadow: none;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 hr {
   background-color: #97cdf3;
-  height: 2px;
+  height: 3px;
   border: 0;
   margin: 0 auto;
+}
+
+header .l-header_title h1 {
+  font-size: 4rem;
+  font-family: "Itim", cursive;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.l-main_container_pic {
+  padding: 91px 55px;
+}
+
+.l-main_container_pic img {
+  width: 100%;
+  opacity: 0.75;
+}
+
+.l-footer_title {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=style.css.map */
