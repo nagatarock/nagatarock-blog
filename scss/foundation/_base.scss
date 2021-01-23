@@ -1,0 +1,19 @@
+@mixin breakpoint( $point ){
+    @if $point == sma{
+        @media (max-width: 750px){
+            @content;
+    }
+}
+@if $point == pc {
+    @media (min-width: 1000px){
+        @content;
+    }
+}
+}
+
+hr{
+    background-color: $main_color;
+    height: 2px;
+    border:0;
+    margin: 0 auto;
+}
