@@ -17,7 +17,7 @@ hr{
     }
 }
 @if $point == pc {
-    @media (min-width: 1000px){
+    @media (min-width: 751px){
         @content;
     }
 }
