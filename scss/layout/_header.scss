@@ -1,20 +1,4 @@
 header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     height: 9%;
     width: 100%;
-.p-header_title{
-    h1{
-        font-size: 4rem;
-        font-family: $title_font;
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding-left: 10px;
-    }
-    @include breakpoint (sma){
-        margin: 0 auto;
-    }
-}
 }
