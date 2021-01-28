@@ -1,7 +1,11 @@
 html{
     font-size: 62.5%;
+    a{
+        text-decoration: none;
+        cursor: pointer;
+        color:#000;
+    }
 }
-
 hr{
     background-color: $main_color;
     height: 3px;
