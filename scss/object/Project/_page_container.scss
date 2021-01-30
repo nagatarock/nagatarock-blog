@@ -1,0 +1,37 @@
+.p-page_container{
+    width: 100%;
+    display: flex;
+    &_left{
+        width: 50%;
+        &_pic{
+            text-align: center;
+            margin-bottom: 3%;
+    }
+    h2{
+        font-size: 3vw;
+        font-family: $title_font;
+        text-align: center;
+    }
+    &_container{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        &_box{
+            width: 25%;
+        img{
+            width: 50%;
+        }
+    }
+    }
+}
+
+
+
+
+    //right//
+    &_right{
+        width: 50%;
+        background-color: blue;
+    }
+}

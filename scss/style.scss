@@ -7,14 +7,18 @@
 @import "layout/header";
 @import "layout/main";
 @import "layout/footer";
+@import "layout/page";
 // Object //
 
 // Component //
 @import "object/Component/main_container_pic";
 @import "object/Component/main_container_menu";
+@import "object/Component/page_container_title";
+@import "object/Component/page_container_left_pic";
 
 // Project //
 @import "object/project/header_menu";
 @import "object/Project/header_menu_btn";
 @import "object/Project/main_container";
+@import "object/Project/page_container";
 // Utility //
