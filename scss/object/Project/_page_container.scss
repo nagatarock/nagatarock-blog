@@ -1,37 +1,53 @@
 .p-page_container{
     width: 100%;
     display: flex;
+    @include breakpoint(sma){
+        flex-direction: column;
+        align-items: center;
+    }
     &_left{
         width: 50%;
         &_pic{
             text-align: center;
             margin-bottom: 3%;
     }
-    h2{
-        font-size: 3vw;
-        font-family: $title_font;
-        text-align: center;
-    }
-    &_container{
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-        &_box{
-            width: 25%;
-        img{
-            width: 50%;
+    &_text{
+        padding: 0 20%;
+        p{
+            text-align: left;
+            font-size: 1.5vw;
         }
     }
-    }
 }
-
-
 
 
     //right//
     &_right{
         width: 50%;
-        background-color: blue;
+    h2{
+        font-size: 3vw;
+        font-family: $title_font;
+        text-align: center;
+        margin: 0 5%;
+    }
+    &_container{
+        width: 100%;
+        &_box{
+            display: flex;
+            padding: 5% 10%;
+        img{
+            width: 25%;
+        }
+        &_text{
+            padding-left: 3vw;
+            h3{
+                font-size: 2vw;
+            }
+            p{
+                font-size: 1.5vw;
+            }
+        }
+    }
+    }
     }
 }
