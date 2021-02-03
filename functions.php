@@ -13,3 +13,15 @@ function nagatarock_script(){
 //管理バーの非表示
    // add_filter('show_admin_bar', '__return_false');
 
+   function custom_theme_setup(){
+       //head内にフィードリンクを出力
+       add_theme_support('automatic-feed-links');
+       //タイトルタグを動的に出力
+       add_theme_support('title-tag');
+       //ブロックエディタ用のcssを有効化
+       add_theme_support('wp-block-styles');
+       //埋め込みコンテンツをレスポンシブ対応に
+       add_theme_support('responsive-embeds');
+   }
+   add_action( 'after_setup_theme' , 'custom_theme_setup');
+

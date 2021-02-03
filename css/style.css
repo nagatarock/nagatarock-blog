@@ -744,11 +744,13 @@ header {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   opacity: 0;
-  z-index: 3;
+  z-index: 0;
 }
 
 .p-header_menu_btn_background.is-open {
+  display: block;
   opacity: 0.75;
+  z-index: 3;
 }
 
 .p-main_container {
