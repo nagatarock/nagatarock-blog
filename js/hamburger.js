@@ -10,21 +10,10 @@ jQuery( function( $ ) {
 	} );
 } );
 
-//トップ写真をランダム表示//
-$(function(){
-var array =[
-		"/img/top1.JPG",
-		"/img/top2.JPG",
-		"/img/top3.jpeg"
-];
-var l = array.length;
-var r = Math.floor(Math.random()*l);
-var imgurl = array[r];
-$("img#random").attr({"src":imgurl});
-});
+
 // animsition
 
-$(document).ready(function() {
+jQuery(document).ready(function() {
 	$(".animsition").animsition({
 	  inClass: 'fade-in',
 	  outClass: 'fade-out',

@@ -4,28 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/hamburger.js"></script>
-    <!-- animsition CSS -->
-    <link rel="stylesheet" href="css/animsition.min.css">
-    <!-- vendor js -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- animsition js -->
-    <script src="js/animsition.min.js"></script>
     <title>nagatarock-blog</title>
+    <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
+    <?php wp_body_open() ;?>
     <div class="animsition">
         <div class="p-header_menu_btn_background"></div>
         <header>
             <div class="p-header">
                 <div class="p-header_title">
-                    <h1><a href="index.html" class="animsition-link" >NAGATAROCK BLOG</a></h1>
+                    <h1><a href="index.html" class="animsition-link" ><?php bloginfo( 'name'); ?></a></h1>
                 </div>
                 <nav class="p-header_menu">
                     <p class="p-header_menu_btn">
@@ -34,10 +24,10 @@
                         <span></span>
                     </p>
                     <ul class="p-header_menu_menu">
-                        <li><a href="index.html" class="animsition-link">TOP</a></li>
+                        <li><a href="<?php echo esc_url( home_url('/') ); ?>" class="animsition-link">TOP</a></li>
                         <li><a href="page.html" class="animsition-link">PROFILE</a></li>
                         <li><a href="portfolio.html" class="animsition-link">PORTFOLIO</a></li>
-                        <li><a href="#" class="animsition-link">BLOG</a></li>
+                        <li><a href="archive.html" class="animsition-link">BLOG</a></li>
                         <li><a href="#" class="animsition-link">CONTACT</a></li>
                     </ul>
                 </nav>
@@ -48,11 +38,11 @@
         <section class="l-main_container">
             <div class="p-main_container">
                 <div class="c-main_container_pic">
-                    <img id="random" src="/img/top1.JPG" alt="トップページの写真">
+                <img src="<?php bloginfo('template_url'); ?>/img/top<?php echo(rand(1,3)); ?>.jpg" alt="トップページの風景の写真" >
                 </div>
                 <nav class="c-main_container_menu">
                     <ul class="c-main_container_menu_menu">
-                        <li><a href="index.html" class="animsition-link">TOP</a></li>
+                        <li><a href="<?php echo esc_url( home_url('/') ); ?>" class="animsition-link">TOP</a></li>
                         <li><a href="page.html" class="animsition-link">PROFILE</a></li>
                         <li><a href="portfolio.html" class="animsition-link">PORTFOLIO</a></li>
                         <li><a href="#" class="animsition-link">BLOG</a></li>
@@ -65,10 +55,11 @@
         <hr>
         <footer>
             <div class="l-footer_title">
-                <span style="font-family:'Times New Roman', 'Times';">&copy;</span>nagatarock since2021
+                <span style="font-family:'Times New Roman', 'Times';">&copy;</span><?php bloginfo('name');?> since2021
             </div>
         </footer>
     </div>
+    <?php wp_footer(); ?>
 </body>
 
 </html>
