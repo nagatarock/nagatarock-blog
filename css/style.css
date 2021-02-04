@@ -451,11 +451,12 @@ header {
   font-size: 2.5rem;
   font-family: "Amatic SC", cursive;
   text-align: center;
-  position: absolute;
+  position: fixed;
   top: 25%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   opacity: 0;
+  pointer-events: none;
 }
 
 .c-main_container_menu_menu {
@@ -499,6 +500,7 @@ header {
 }
 
 .c-main_container_menu.is-open {
+  pointer-events: auto;
   opacity: 1;
   z-index: 4;
 }
@@ -739,12 +741,12 @@ header {
 .p-header_menu_btn_background {
   width: 100%;
   height: 100%;
-  position: fixed;
   background-color: #fff;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  transition: .5s;
   opacity: 0;
   z-index: 0;
+  position: fixed;
 }
 
 .p-header_menu_btn_background.is-open {

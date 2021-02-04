@@ -3,10 +3,11 @@
          font-size:      2.5rem;
          font-family:    $title_font;
          text-align:     center;
-         position:       absolute;
+         position:       fixed;
          top:            25%;
          transition:     0.5s; //ハンバーガーボタンを押した時のメニューの表示
          opacity:        0;
+         pointer-events: none;//ハンバーガーメニューを開くまではクリックできない
          &_menu{
          display:        flex;
          flex-direction: column;
@@ -37,6 +38,7 @@
          }
          }
 &.is-open{
+    pointer-events: auto;
          opacity:        1;
          z-index:        4;
 }

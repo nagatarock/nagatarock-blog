@@ -5,7 +5,7 @@ function nagatarock_script(){
     wp_enqueue_style('style', esc_url(get_template_directory_uri()).'/style.css' , array(),'1.0.0');
     wp_enqueue_style('style', esc_url(get_template_directory_uri()).'/css/animsition.min.css' , array(),'1.0.0');
     wp_enqueue_script('script-name' , esc_url(get_template_directory_uri()). '/js/jquery-3.5.1.min.js',array('jquery'),'1.0.0',true);    
-    wp_enqueue_script('script-animation' , esc_url(get_template_directory_uri()). '/js/animsition.min.js',array('jquery'),'1.0.0',true);    
+    // wp_enqueue_script('script-animation' , esc_url(get_template_directory_uri()). '/js/animsition.min.js',array('jquery'),'1.0.0',true);    
     wp_enqueue_script('script-hamburger' , esc_url(get_template_directory_uri()). '/js/hamburger.js',array('jquery'),'1.0.0',true);    
 }
     add_action( 'wp_enqueue_scripts', 'nagatarock_script');

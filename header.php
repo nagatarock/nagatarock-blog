@@ -16,7 +16,7 @@
         <header>
             <div class="p-header">
                 <div class="p-header_title">
-                    <h1><a href="index.html" class="animsition-link" ><?php bloginfo( 'name'); ?></a></h1>
+                    <h1><a href="<?php echo esc_url( home_url( '/' ) ) ?>" class="animsition-link" ><?php bloginfo( 'name'); ?></a></h1>
                 </div>
                 <nav class="p-header_menu">
                     <p class="p-header_menu_btn">
@@ -26,10 +26,10 @@
                     </p>
                     <ul class="p-header_menu_menu">
                         <li><a href="<?php echo esc_url( home_url('/') ); ?>" class="animsition-link">TOP</a></li>
-                        <li><a href="page.html" class="animsition-link">PROFILE</a></li>
+                        <li><a href="<?php echo esc_url( home_url('/profile-2')); ?>" class="animsition-link">PROFILE</a></li>
                         <li><a href="portfolio.html" class="animsition-link">PORTFOLIO</a></li>
                         <li><a href="archive.html" class="animsition-link">BLOG</a></li>
-                        <li><a href="#" class="animsition-link">CONTACT</a></li>
+                        <li><a href="<?php echo get_page_link('153');?>" class="animsition-link">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
