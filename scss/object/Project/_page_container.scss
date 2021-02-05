@@ -16,6 +16,7 @@
         p{
             text-align: left;
             font-size: 1.5vw;
+            font-family: $font;
         }
     }
 }
@@ -42,9 +43,11 @@
             padding-left: 3vw;
             h3{
                 font-size: 2vw;
+                font-family: $font;
             }
             p{
                 font-size: 1.5vw;
+                font-family: $font;
             }
         }
     }
