@@ -22,6 +22,20 @@ function nagatarock_script(){
        add_theme_support('wp-block-styles');
        //埋め込みコンテンツをレスポンシブ対応に
        add_theme_support('responsive-embeds');
+       //アイキャッチ画像を有効化
+       add_theme_support('post-thumbnails');
+       set_post_thumbnail_size( 231, 177, false);
    }
    add_action( 'after_setup_theme' , 'custom_theme_setup');
 
+//投稿一覧ページの本文（抜粋）の文字数調整
+ function my_excerpt_length($length) {
+ return 80;
+ }
+ add_filter('excerpt_length', 'my_excerpt_length');
+
+ //投稿一覧ページの本文の後のリンク
+ function my_excerpt_more($post) {
+    return '<a href="'. get_permalink($post->ID) . '">' . '…続きを読む' . '';
+    }
+    add_filter('excerpt_more', 'my_excerpt_more');
