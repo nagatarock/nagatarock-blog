@@ -662,6 +662,12 @@ header {
   font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
 }
 
+@media (max-width: 750px) {
+  .c-author_box {
+    display: none;
+  }
+}
+
 .c-category_box {
   width: 20vw;
   border-top: solid 2px;
@@ -670,6 +676,7 @@ header {
   list-style: none;
   font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
   padding: 20px 10px;
+  margin-bottom: 40px;
 }
 
 .c-category_box h2 {
@@ -698,6 +705,45 @@ header {
 }
 
 .c-category_box ul :hover {
+  color: gray;
+}
+
+.c-archive_box {
+  width: 20vw;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
+  border-color: #eeeeee;
+  list-style: none;
+  font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
+  padding: 20px 10px;
+}
+
+.c-archive_box h2 {
+  text-align: center;
+}
+
+.c-archive_box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c-archive_box ul li {
+  position: relative;
+  padding: 0 0 0 1.5em;
+  margin: 0;
+}
+
+.c-archive_box ul li ::before {
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  font-family: "Font Awesome 5 Free";
+  content: '\f14a';
+  font-weight: 400;
+}
+
+.c-archive_box ul :hover {
   color: gray;
 }
 
@@ -1012,11 +1058,5 @@ header {
 
 .p-archive_container_right {
   width: 26%;
-}
-
-@media (max-width: 750px) {
-  .p-archive_container_right {
-    display: none;
-  }
 }
 /*# sourceMappingURL=style.css.map */

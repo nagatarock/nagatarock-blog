@@ -44,6 +44,10 @@ function nagatarock_script(){
         'name' => '記事カテゴリー',
         'id' => 'category-sidebar',
       ) );
+      register_sidebar( array(
+        'name' => 'アーカイブカテゴリー',
+        'id' => 'archive-sidebar',
+      ) );
   }
   add_action( 'widgets_init', 'my_theme_widgets_init' );
 

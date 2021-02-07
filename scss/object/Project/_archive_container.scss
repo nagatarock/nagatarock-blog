@@ -20,8 +20,5 @@
     }
     &_right{
         width: 26%;
-        @include breakpoint(sma){
-            display: none;
-        }
     }
 }

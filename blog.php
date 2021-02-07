@@ -79,6 +79,9 @@
         <div class="c-category_box">
             <?php dynamic_sidebar('category-sidebar'); ?>
         </div>
+        <div class="c-archive_box">
+            <?php dynamic_sidebar('archive-sidebar'); ?>
+        </div>
     </div>
     <?php get_sidebar(); ?>
     </div>
