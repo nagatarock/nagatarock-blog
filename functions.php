@@ -34,8 +34,16 @@ function nagatarock_script(){
  }
  add_filter('excerpt_length', 'my_excerpt_length');
 
- //投稿一覧ページの本文の後のリンク
- function my_excerpt_more($post) {
-    return '<a href="'. get_permalink($post->ID) . '">' . '…続きを読む' . '';
-    }
-    add_filter('excerpt_more', 'my_excerpt_more');
+ //ウィジェット
+   function my_theme_widgets_init() {
+    register_sidebar( array(
+      'name' => 'この記事を書いた人',
+      'id' => 'main-sidebar',
+    ) );
+    register_sidebar( array(
+        'name' => '記事カテゴリー',
+        'id' => 'category-sidebar',
+      ) );
+  }
+  add_action( 'widgets_init', 'my_theme_widgets_init' );
+

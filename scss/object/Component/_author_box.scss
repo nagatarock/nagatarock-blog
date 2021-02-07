@@ -1,0 +1,24 @@
+.c-author_box{
+    width: 20vw;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+    border-color: #eeeeee;
+    text-align: center;
+    padding: 20px 10px;
+    margin-bottom: 40px;
+    h3{
+        font-size: 1.5vw;
+        font-family: $font;
+    }
+    p{
+        font-size: 0.5vw;
+        font-family: $font;
+    }
+    &_profile{
+        p{
+        text-align: left;
+        font-size: 0.5vw;
+        font-family: $font;
+    }
+}
+}

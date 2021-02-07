@@ -15,10 +15,10 @@
         <div class="p-page_container">
             <div class="p-page_container_left">
                 <div class="p-page_container_left_pic">
-                    <div class="c-page_container_left_pic_face">
+                    <div class="c-author_pic">
                         <img src="<?php bloginfo('template_directory'); ?>/img/profile.png" alt="このサイト作成者の写真">
                     </div>
-                    <div class="c-page_container_left_pic_twitter">
+                    <div class="c-twitter_pic">
                         <a href="<?php echo esc_url('https://twitter.com/nagatarock21') ;?> "><img src="<?php bloginfo('template_directory'); ?>/img/Logo blue.svg" alt="ツイッターアイコン"></a>
                     </div>
                     <div class="p-page_container_left_text">

@@ -7,6 +7,7 @@
     <title>nagatarock-blog</title>
     <?php wp_head(); ?>
     <link rel="shortcut icon" href="http://nagatarockblog.local/wp-content/uploads/2021/02/favicon.ico">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <script>
 (function(d) {
     var config = {
