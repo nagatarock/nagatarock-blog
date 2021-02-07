@@ -35,6 +35,11 @@
                 <h3><?php the_title(); ?></h3>
             </div>
             <div class="c-archive_container_left_box_text">
+            公開日:<?php echo get_the_date('Y/n/j'); ?>
+            <?php if(get_the_date('Y/n/j')
+            != get_the_modified_date('Y/n/j')):?>
+            最終更新日:<?php echo get_the_modified_date('Y/n/j'); ?>
+            <?php endif;?>                
                 <?php the_excerpt(); ?>
             </div>
             <div class="c-archive_container_left_box_more">
