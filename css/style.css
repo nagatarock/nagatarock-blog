@@ -524,6 +524,13 @@ header {
   text-align: center;
 }
 
+.c-container_title h2 {
+  font-size: 3vw;
+  white-space: nowrap;
+  font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
+  text-align: center;
+}
+
 .c-author_pic img {
   width: 25%;
   height: 25%;
@@ -531,7 +538,7 @@ header {
 }
 
 .c-twitter_pic img {
-  width: 5%;
+  width: 7%;
 }
 
 .c-port_container_page {
@@ -715,6 +722,10 @@ header {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 20%;
+}
+
+.p-header_title h1 :hover {
+  color: gray;
 }
 
 @media (max-width: 750px) {
