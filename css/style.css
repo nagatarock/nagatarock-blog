@@ -701,6 +701,11 @@ header {
   color: gray;
 }
 
+.wp-pagenavi {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
 .p-header {
   width: 100%;
   display: -webkit-box;

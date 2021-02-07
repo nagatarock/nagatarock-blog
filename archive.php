@@ -75,6 +75,7 @@
     <!--p-archive_container-->
 </section>
 <?php wp_reset_postdata(); ?>
+<?php wp_pagenavi(); ?>
 <hr>
 <?php get_footer(); ?>
 <?php wp_footer(); ?>
