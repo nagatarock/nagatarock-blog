@@ -34,7 +34,7 @@
             <div class="c-archive_container_left_box_title">
                 <h3><?php the_title(); ?></h3>
             </div>
-            <div class="c-archive_container_left_box_text">
+            <div class="c-date">
             公開日:<?php echo get_the_date('Y/n/j'); ?>
             <?php if(get_the_date('Y/n/j')
             != get_the_modified_date('Y/n/j')):?>
@@ -49,7 +49,7 @@
         </article>
         <?php endwhile; //投稿データがない場合
         else:?>
-                    <?php endif; ?>
+        <?php endif; ?>
     </div>
     <div class="p-archive_container_right">
         <div class="c-author_box">
