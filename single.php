@@ -23,6 +23,9 @@
     <?php the_content(); ?>
 </div>
 <div class="p-single_container_right">
+<?php if(have_posts()): ?><!--記事があるかを調べ -->
+            <?php while(have_posts()): //次の記事があるかを調べ
+            the_post(); ?>     <!-- 次の記事を表示する -->
     <div class="c-author_box">
         <div class="c-authort_box_text">
             <h3>ABOUT US</h3>
@@ -43,6 +46,9 @@
     <div class="c-archive_box">
         <?php dynamic_sidebar('archive-sidebar'); ?>
     </div>
+    <?php endwhile; //投稿データがない場合
+        else:?>
+        <?php endif; ?>
 </div>
 </section>
 </div><!-- l-single_container -->
