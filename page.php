@@ -9,6 +9,7 @@
         <div class="c-container_title">
             <h1><?php the_title() ;?></h1>
         </div>
+    </section>
 <?php get_sidebar() ; ?>
         <hr>
         <?php get_footer() ;?>

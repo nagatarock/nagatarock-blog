@@ -624,10 +624,6 @@ header {
   margin-bottom: 10px;
 }
 
-.c-archive_container_left_box_text {
-  font-size: 1vw;
-}
-
 .c-archive_container_left_box_more {
   font-size: 1.5vw;
 }
@@ -1152,5 +1148,50 @@ header {
   border-radius: 0.4em;
   margin-bottom: 10px;
   padding-left: 5px;
+}
+
+.p-404_container {
+  width: 80%;
+  margin: 10% auto;
+}
+
+.p-404_container h2 {
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+.p-404_container p {
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+.p-404_container a {
+  position: relative;
+  display: inline-block;
+}
+
+.p-404_container a:hover {
+  color: gray;
+}
+
+.p-404_container a::after {
+  font-size: 1.5vw;
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: gray;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.p-404_container a:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */
