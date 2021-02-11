@@ -26,9 +26,8 @@
             <?php
             while ($the_query->have_posts()) ://次の記事があるか調べ
             $the_query->the_post(); //次の記事を表示する ?>
-
-            <article class="p-archive_container_left_box">
                 <a href="<?php the_permalink($post->ID); ?>">
+            <article class="p-archive_container_left_box">
                     <div class="c-archive_container_left_box_thumb">
                         <?php if (has_post_thumbnail()) : //アイキャッチ画像があれば?>
                             <?php the_post_thumbnail(
@@ -37,7 +36,7 @@
                                                 )) //画像を取得する;?>
                         <?php else : //アイキャッチ画像がなければ ?>
                             <img src="<?php echo esc_url(get_theme_file_uri('img/no-image.png')); ?>" alt="サムネイル画像はありません">
-                        <?php endif; ?></a>
+                        <?php endif; ?>
         </div>
         <div class="p-archive_container_left_box_sentence">
             <div class="c-archive_container_left_box_title">
@@ -53,11 +52,9 @@
                 <?php endif; ?>
                 <?php the_excerpt(); ?>
             </div>
-            <div class="c-archive_container_left_box_more">
-                <a href="<?php the_permalink($post->ID); ?>">もっと読む</a>
-            </div>
         </div>
         </article>
+            </a>
     <?php endwhile; ?>
 <?php endif; //投稿記事の終了?>
     </div>

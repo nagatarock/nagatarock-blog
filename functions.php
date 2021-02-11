@@ -51,5 +51,7 @@ function nagatarock_script(){
   }
   add_action( 'widgets_init', 'my_theme_widgets_init' );
 
-  
-
+// テーマフォルダ直下のeditor-style.cssを読み込み
+add_action('admin_init',function(){
+    add_editor_style();
+});

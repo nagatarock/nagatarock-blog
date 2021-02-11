@@ -13,8 +13,8 @@
         <?php if(have_posts()): ?><!--記事があるかを調べ -->
             <?php while(have_posts()): //次の記事があるかを調べ
             the_post(); ?>     <!-- 次の記事を表示する -->
-                    <article class="p-archive_container_left_box">
                         <a href="<?php the_permalink($post->ID); ?>">
+                    <article class="p-archive_container_left_box">
                             <div class="c-archive_container_left_box_thumb">
                                 <?php if (has_post_thumbnail()) : //アイキャッチ画像があれば
                                 ?>
@@ -28,7 +28,6 @@
                                 ?>
                                     <img src="<?php echo esc_url(get_theme_file_uri('img/no-image.png')); ?>" alt="サムネイル画像はありません">
                                 <?php endif; ?>
-                        </a>
         </div>
         <div class="p-archive_container_left_box_sentence">
             <div class="c-archive_container_left_box_title">
@@ -42,11 +41,9 @@
             <?php endif;?>                
                 <?php the_excerpt(); ?>
             </div>
-            <div class="c-archive_container_left_box_more">
-                <a href="<?php the_permalink($post->ID); ?>">もっと読む</a>
-            </div>
         </div>
         </article>
+        </a>
         <?php endwhile; //投稿データがない場合
         else:?>
         <?php endif; ?>

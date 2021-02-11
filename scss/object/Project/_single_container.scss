@@ -1,15 +1,12 @@
 .p-single_container{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     padding: 0 5%;
     &_left{
-        width: 64%;
-        p{
-            font-size: 1.5rem;
-        }
+        width: 75%;
     }
     &_right{
-        width: 26%;
+        width: 15%;
     }
 }

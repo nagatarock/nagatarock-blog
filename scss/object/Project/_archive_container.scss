@@ -9,10 +9,22 @@
         display: flex;
         width: 100%;
         margin-bottom: 40px;
+        border-left: double 5px;
+        border-right: double 5px;
+        box-shadow: 1px 0 4px rgba(0, 0, 0, 0.32);/*影*/
+        border-color:#eee;
+        transition: all 0.5s;
+        a{
+            width: 50%;
+        }
         &_sentence{
             width: 64%;
             margin-left: 25px;
         }
+        &:hover{
+            transform: scale(1.05);
+            opacity: 0.5;
+           }
     }
     @include breakpoint(sma){
         margin: 0 auto 40px auto;

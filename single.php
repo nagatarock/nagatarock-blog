@@ -20,7 +20,9 @@
                     <?php endif; ?>
                 </div>
             </div>
+            <div class="c-single_content">
             <?php the_content(); ?>
+            </div>
         </div>
         <div class="p-single_container_right">
             <?php if (have_posts()) : ?>

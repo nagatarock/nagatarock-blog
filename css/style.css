@@ -611,7 +611,7 @@ header {
 }
 
 .c-archive_container_left_box_thumb {
-  width: 36%;
+  width: 50%;
 }
 
 .c-archive_container_left_box_thumb img {
@@ -760,14 +760,14 @@ header {
 
 .c-single_thumbnail img {
   max-width: 50vw;
-  height: 25vh;
+  height: 35vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .c-single_title {
   font-size: 1.5rem;
-  margin: 10px;
+  margin: 10px 0 10px 0;
 }
 
 .c-date {
@@ -795,6 +795,59 @@ header {
   opacity: 0.5;
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
+}
+
+.c-single_content {
+  padding: 0 5%;
+  border-left: double 5px;
+  border-right: double 5px;
+  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  /*影*/
+  border-color: #eee;
+}
+
+.c-single_content h1, .c-single_content h2, .c-single_content h3, .c-single_content h4, .c-single_content h5, .c-single_content h6 {
+  font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
+}
+
+.c-single_content h1 {
+  font-size: 5rem;
+}
+
+.c-single_content h2 {
+  font-size: 4rem;
+}
+
+.c-single_content h3 {
+  font-size: 3rem;
+}
+
+.c-single_content h4 {
+  font-size: 2rem;
+}
+
+.c-single_content h5 {
+  font-size: 1.5rem;
+}
+
+.c-single_content h6 {
+  font-size: 1rem;
+}
+
+.c-single_content p {
+  font-size: 1.5rem;
+  font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
+  line-height: 30px;
+}
+
+.c-single_content a {
+  text-decoration: underline;
+  color: blue;
+}
+
+.c-single_content a:hover {
+  color: gray;
 }
 
 .p-header {
@@ -1088,11 +1141,29 @@ header {
   display: flex;
   width: 100%;
   margin-bottom: 40px;
+  border-left: double 5px;
+  border-right: double 5px;
+  -webkit-box-shadow: 1px 0 4px rgba(0, 0, 0, 0.32);
+          box-shadow: 1px 0 4px rgba(0, 0, 0, 0.32);
+  /*影*/
+  border-color: #eee;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.p-archive_container_left_box a {
+  width: 50%;
 }
 
 .p-archive_container_left_box_sentence {
   width: 64%;
   margin-left: 25px;
+}
+
+.p-archive_container_left_box:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 0.5;
 }
 
 @media (max-width: 750px) {
@@ -1106,7 +1177,7 @@ header {
 }
 
 .p-single_container {
-  width: 100%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1117,15 +1188,11 @@ header {
 }
 
 .p-single_container_left {
-  width: 64%;
-}
-
-.p-single_container_left p {
-  font-size: 1.5rem;
+  width: 75%;
 }
 
 .p-single_container_right {
-  width: 26%;
+  width: 15%;
 }
 
 .p-contact_container {
