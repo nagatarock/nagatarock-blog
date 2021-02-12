@@ -17,4 +17,7 @@
     :hover{
         color: gray;
     }
+    @include breakpoint (sma){
+        width: 50%;
+    }
 }

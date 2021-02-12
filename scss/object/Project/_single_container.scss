@@ -9,4 +9,17 @@
     &_right{
         width: 15%;
     }
+    @include breakpoint (sma){
+        display: block;
+        width: 100%;
+        &_left{
+            width: 100%;
+        }
+        &_right{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+    }
 }

@@ -31,4 +31,13 @@
             color: gray;
         }
     }
+    @include breakpoint (sma){
+        width: 50%;
+        margin-bottom: 0;
+        border-top: 0;
+        border-bottom: 0;
+        border-left: solid 2px;
+        border-right: 0;
+        border-color: #eeeeee;
+    }
 }

@@ -1,3 +1,4 @@
+//投稿記事内の調整//
 .c-single_content{
     padding: 0 5%;
     border-left: double 5px;
@@ -29,6 +30,9 @@
         font-size: 1.5rem;
         font-family: $font;
         line-height: 30px;
+    }
+    img{
+        width: 100%;
     }
     a{
         text-decoration:underline ;
