@@ -19,18 +19,31 @@
         }
         &_sentence{
             width: 64%;
-            margin-left: 25px;
+            margin: 0 25px;
+            @include breakpoint (sma){
+                margin: 0 10px;
+            }
         }
         &:hover{
             transform: scale(1.05);
             opacity: 0.5;
            }
     }
-    @include breakpoint(sma){
-        margin: 0 auto 40px auto;
-    }
     }
     &_right{
         width: 26%;
+    }
+    @include breakpoint (sma){
+        display: block;
+        width: 100%;
+        &_left{
+            width: 100%;
+        }
+        &_right{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
     }
 }

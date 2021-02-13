@@ -5,20 +5,31 @@
     border-right: double 5px;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
     border-color:#eee;
+    margin-bottom: 10px;
     h1,h2,h3,h4,h5,h6{
         font-family: $font;
+        padding-left: 10px;
+        margin: 5px 0;
     }
     h1{
         font-size: 5rem;
     }
     h2{
-        font-size: 4rem;
+        font-size: 3.5rem;
+        color: white;
+        background-color:$main_color;
+        width: 100%;
     }
     h3{
         font-size: 3rem;
+        width: 90%;
+        border-bottom: 2px solid;
+        border-color: $main_color;
     }
     h4{
         font-size: 2rem;
+        border-left: 5px double;
+        border-color: $main_color;
     }
     h5{
         font-size: 1.5rem;
@@ -29,16 +40,47 @@
     p{
         font-size: 1.5rem;
         font-family: $font;
-        line-height: 30px;
+        line-height: 40px;
+    span{
+            font-size: 1em;
+        }
     }
     img{
-        width: 100%;
+        max-width: 100%;
     }
     a{
         text-decoration:underline ;
-        color: blue;
+        color:$main_color;
     }
     a:hover{
         color: gray;
+    }
+
+    //スマフォのフォント指定//
+    @include breakpoint(sma){
+        h1{
+            font-size: 1.5rem;
+        }
+        h2{
+            font-size: 1.5rem;
+
+        }
+        h3{
+            font-size: 1.3rem;
+        }
+        h4{
+            font-size: 1.1rem;
+        }
+        h5{
+            font-size: 1rem;
+        }
+        h6{
+            font-size: 1rem;
+        }
+        p{
+            font-size: 1.1rem;
+            font-family: $font;
+            line-height: 30px;
+        }
     }
 }

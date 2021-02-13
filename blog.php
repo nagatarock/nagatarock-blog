@@ -91,7 +91,7 @@
                                                 'base' => get_pagenum_link(1) . '%_%',
                                                 'format' => 'page/%#%/',
                                                 'current' => max(1, $paged),
-                                                'mid_size' => 1,
+                                                'mid_size' => 10,
                                                 'total' => $the_query->max_num_pages
                                             ));
                                         }

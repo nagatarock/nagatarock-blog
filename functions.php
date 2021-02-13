@@ -30,7 +30,7 @@ function nagatarock_script(){
 
 //投稿一覧ページの本文（抜粋）の文字数調整
  function my_excerpt_length($length) {
- return 80;
+ return 140;
  }
  add_filter('excerpt_length', 'my_excerpt_length');
 
@@ -50,8 +50,3 @@ function nagatarock_script(){
       ) );
   }
   add_action( 'widgets_init', 'my_theme_widgets_init' );
-
-// テーマフォルダ直下のeditor-style.cssを読み込み
-add_action('admin_init',function(){
-    add_editor_style();
-});
