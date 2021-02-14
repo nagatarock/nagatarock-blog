@@ -22,6 +22,13 @@
             </div>
             <div class="c-single_content">
             <?php the_content(); ?>
+            <?php the_tags('タグ：','|'); ?> <!--タグの表示-->
+        <div class="c-nav-link">
+        <?php the_post_navigation( array(
+                'prev_text'      => '<<前の記事へ',
+                'next_text'      => '次の記事へ>>',
+        )); ?> <!--前後記事へのリンク-->
+        </div>
             </div>
         </div>
         <div class="p-single_container_right">

@@ -51,8 +51,7 @@
                     <p>html&cssでコーディング→WordPress化させました。</p>
                     <p></p>
                 </div>
-            </div>
-            
+            </div>           
         </div>
     </section>
     <?php

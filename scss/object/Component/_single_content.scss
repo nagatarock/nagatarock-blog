@@ -6,25 +6,29 @@
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
     border-color:#eee;
     margin-bottom: 10px;
+    line-height: 40px;
     h1,h2,h3,h4,h5,h6{
         font-family: $font;
         padding-left: 10px;
         margin: 5px 0;
     }
     h1{
-        font-size: 5rem;
+        font-size: 4rem;
+        line-height: 50px;
     }
     h2{
-        font-size: 3.5rem;
+        font-size: 3.25rem;
         color: white;
         background-color:$main_color;
         width: 100%;
+        padding: 5px 0 5px 10px;
     }
     h3{
-        font-size: 3rem;
+        font-size: 2.5rem;
         width: 90%;
         border-bottom: 2px solid;
         border-color: $main_color;
+        padding: 5px 0 5px 10px;
     }
     h4{
         font-size: 2rem;
@@ -40,10 +44,15 @@
     p{
         font-size: 1.5rem;
         font-family: $font;
-        line-height: 40px;
     span{
             font-size: 1em;
         }
+    }
+    ul{
+        font-size: 1.5rem;
+    }
+    ol{
+        font-size: 1.5rem;
     }
     img{
         max-width: 100%;

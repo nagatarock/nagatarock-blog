@@ -50,3 +50,4 @@ function nagatarock_script(){
       ) );
   }
   add_action( 'widgets_init', 'my_theme_widgets_init' );
+

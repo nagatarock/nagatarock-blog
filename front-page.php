@@ -3,7 +3,7 @@
 <section class="l-main_container">
     <div class="p-main_container">
         <div class="c-main_container_pic">
-            <img src="<?php bloginfo('template_url'); ?>/img/top<?php echo (rand(1, 3)); ?>.jpg" alt="トップページの風景の写真">
+            <img src="<?php bloginfo('template_url'); ?>/img/top<?php echo (rand(1, 3)); ?>.png" alt="トップページの風景の写真">
         </div>
         <?php get_sidebar(); ?>
     </div>

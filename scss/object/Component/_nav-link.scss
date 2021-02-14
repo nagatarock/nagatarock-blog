@@ -1,0 +1,27 @@
+/*前後記事へのリンク部分の装飾*/
+.nav-links{
+    display: flex;
+}
+.nav-previous{ //前の記事
+    flex:1;
+    margin-left: 5px;
+}
+.nav-next{ //次の記事
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 5px;
+    text-align: right;
+}
+/*「投稿ナビゲーション」を非表示にする*/
+.screen-reader-text{
+    border: 0;
+    clip:rect( 1px, 1px, 1px, 1px);
+    clip-path:  inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal;
+}
