@@ -21,6 +21,9 @@
             font-size: 1.4vw;
             font-family: $font;
             line-height: 30px;
+            @include breakpoint (sma){
+                font-size: 1.5rem;
+            }
         }
     }
 }
@@ -58,3 +61,28 @@
     }
     }
 }
+  //safariレイアウト崩れを防ぐ記述//
+_::-webkit-full-page-media, _:future, :root .p-page_container_right {
+    width: 50%;
+  }
+  
+  _::-webkit-full-page-media, _:future, :root  .p-page_container_right_container {
+    width: 25%;
+  }
+  
+  _::-webkit-full-page-media, _:future, :root  .p-page_container_right_container_box {
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-box;
+    padding: 5% 10%;
+  }
+  
+  _::-webkit-full-page-media, _:future, :root  .p-page_container_right_container_box img {
+    width: 100%;
+  }
+  
+  _::-webkit-full-page-media, _:future, :root  .p-page_container_right_container_box_text {
+    padding-left: 3vw;
+    width: 300%;
+  }
+  

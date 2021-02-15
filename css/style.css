@@ -624,6 +624,12 @@ header {
   margin-bottom: 10px;
 }
 
+@media (max-width: 750px) {
+  .c-archive_container_left_box_title {
+    font-size: 1.25rem;
+  }
+}
+
 .c-archive_container_left_box_more {
   font-size: 1.5vw;
 }
@@ -802,6 +808,12 @@ header {
 
 .c-date {
   font-size: 1vw;
+}
+
+@media (max-width: 750px) {
+  .c-date {
+    font-size: 1.2rem;
+  }
 }
 
 .c-contact_button {
@@ -1181,6 +1193,12 @@ header {
   line-height: 30px;
 }
 
+@media (max-width: 750px) {
+  .p-page_container_left_text p {
+    font-size: 1.5rem;
+  }
+}
+
 .p-page_container_right {
   width: 50%;
 }
@@ -1219,6 +1237,30 @@ header {
 .p-page_container_right_container_box_text p {
   font-size: 1.5vw;
   font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
+}
+
+_::-webkit-full-page-media, _:future, :root .p-page_container_right {
+  width: 50%;
+}
+
+_::-webkit-full-page-media, _:future, :root .p-page_container_right_container {
+  width: 25%;
+}
+
+_::-webkit-full-page-media, _:future, :root .p-page_container_right_container_box {
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-box;
+  padding: 5% 10%;
+}
+
+_::-webkit-full-page-media, _:future, :root .p-page_container_right_container_box img {
+  width: 100%;
+}
+
+_::-webkit-full-page-media, _:future, :root .p-page_container_right_container_box_text {
+  padding-left: 3vw;
+  width: 300%;
 }
 
 .p-port_container {

@@ -30,7 +30,7 @@ function nagatarock_script(){
 
 //投稿一覧ページの本文（抜粋）の文字数調整
  function my_excerpt_length($length) {
- return 140;
+ return 80;
  }
  add_filter('excerpt_length', 'my_excerpt_length');
 
