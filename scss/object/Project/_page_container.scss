@@ -37,6 +37,9 @@
         font-family: $title_font;
         text-align: center;
         margin: 0 5%;
+        @include breakpoint (sma){
+            font-size: 2rem;
+        }
     }
     &_container{
         width: 100%;

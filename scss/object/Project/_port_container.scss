@@ -8,6 +8,9 @@
     &_box{
         width: 40%;
         margin-bottom: 10%;
+        @include breakpoint (sma){
+            width: 60%;
+        }
 }
 @include breakpoint(sma){
     flex-direction: column;

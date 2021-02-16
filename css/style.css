@@ -574,11 +574,17 @@ header {
 }
 
 .c-port_container_page .c-port_container_mask .c-port_container_title {
-  font-size: 1.5vw;
+  font-size: 1.8rem;
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+}
+
+@media (max-width: 750px) {
+  .c-port_container_page .c-port_container_mask .c-port_container_title {
+    font-size: 1.4rem;
+  }
 }
 
 .c-port_container_page:hover .c-port_container_mask {
@@ -604,10 +610,22 @@ header {
   font-size: 1.5vw;
 }
 
+@media (max-width: 750px) {
+  .c-port_container_box_text h3 {
+    font-size: 1.5rem;
+  }
+}
+
 .c-port_container_box_text p {
   font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
   font-size: 1vw;
   word-break: break-all;
+}
+
+@media (max-width: 750px) {
+  .c-port_container_box_text p {
+    font-size: 1.4rem;
+  }
 }
 
 .c-archive_container_left_box_thumb {
@@ -885,7 +903,7 @@ header {
 }
 
 .c-single_content h5 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .c-single_content h6 {
@@ -893,7 +911,7 @@ header {
 }
 
 .c-single_content p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
 }
 
@@ -933,16 +951,16 @@ header {
     font-size: 1.3rem;
   }
   .c-single_content h4 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .c-single_content h5 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .c-single_content h6 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .c-single_content p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
     line-height: 30px;
   }
@@ -973,17 +991,7 @@ header {
 
 /*「投稿ナビゲーション」を非表示にする*/
 .screen-reader-text {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  word-wrap: normal;
+  display: none;
 }
 
 .p-header {
@@ -1210,6 +1218,12 @@ header {
   margin: 0 5%;
 }
 
+@media (max-width: 750px) {
+  .p-page_container_right h2 {
+    font-size: 2rem;
+  }
+}
+
 .p-page_container_right_container {
   width: 100%;
 }
@@ -1279,6 +1293,12 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 .p-port_container_box {
   width: 40%;
   margin-bottom: 10%;
+}
+
+@media (max-width: 750px) {
+  .p-port_container_box {
+    width: 60%;
+  }
 }
 
 @media (max-width: 750px) {
