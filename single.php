@@ -3,12 +3,15 @@
 <div class="l-single_container">
     <section class="p-single_container">
         <div class="p-single_container_left">
+        <div class="p-single_title">
             <div class="c-single_title">
                 <h1><?php the_title(); ?></h1>
             </div>
             <div class="c-single_thumbnail">
                 <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail('large'); ?>
+                    <?php the_post_thumbnail('large'); 
+                    else:?>
+                    <img src="<?php echo esc_url(get_theme_file_uri('img/no-thumbnail.png')); ?>" alt="サムネイル画像はありません">
                 <?php endif; ?>
                 <div class="c-date">
                     公開日:<?php echo get_the_date('Y/n/j'); ?>
@@ -19,6 +22,7 @@
                         最終更新日:<?php echo get_the_modified_date('Y/n/j'); ?>
                     <?php endif; ?>
                 </div>
+            </div>
             </div>
             <div class="c-single_content">
             <?php the_content(); ?>
