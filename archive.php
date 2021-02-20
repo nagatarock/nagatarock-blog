@@ -3,9 +3,11 @@
 <section class="l-archive_container">
     <div class="c-container_title">
         <h2>
-            <?php $category = get_the_category();
-        $cat_name = $category[0]->cat_name; echo $cat_name
-        ;?>
+        <?php if($monthnum||$year||$cat){ ?>
+<?php if($cat){ ?><?php single_cat_title(); ?><?php }//カテゴリー時はカテゴリーを表示
+elseif($monthnum||$year){ echo $year.'年'; ?> <!-- 年間アーカイブは年を表示 -->
+<?php if($monthnum){ echo $monthnum.'月';} } ?><!-- 月別アーカイブ年月を表示 -->
+<?php } ?>
 </h2>
     </div>
     <div class="p-archive_container">
