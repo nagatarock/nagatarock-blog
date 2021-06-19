@@ -1,7 +1,4 @@
 .c-container_title{
-    width: 100%;
-    height: 25%;
-    margin: 5% auto;
 h1{
     font-size: 5vw;
     white-space: nowrap;
@@ -9,9 +6,9 @@ h1{
     text-align: center;
 }
 h2{
-    font-size: 3vw;
+    font-size: 40px;
     white-space: nowrap;
-    font-family: $font;
+    font-family: $title_font;
     text-align: center;
 }
 }

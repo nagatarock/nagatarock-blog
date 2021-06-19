@@ -10,18 +10,23 @@ hr{
     background-color: $main_color;
     height: 3px;
     border:0;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
 }
 
 // @mixinの設定 //
 @mixin breakpoint( $point ){
     @if $point == sma{
-        @media (max-width: 750px){
+        @media (max-width: 640px){
             @content;
     }
 }
+@if $point == tab{
+    @media (max-width: 768px)and(min-width:641px){
+        @content;
+}
+}
 @if $point == pc {
-    @media (min-width: 751px){
+    @media (min-width: 769px){
         @content;
     }
 }

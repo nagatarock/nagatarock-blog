@@ -1,3 +1,28 @@
-.p-main_container{
+.p-main_visual{
     position: relative;
-}
+    margin-top: 77px;
+        img {
+            width: 100%;
+            height: 600px;
+            opacity: 0.75;
+            object-fit: cover;
+            animation: fadeIn 3s ease 0s 1 normal;
+        @include breakpoint(tb){
+            height: 300px;
+        }
+        @include breakpoint(sma){
+            height: 200px;
+        }
+        }
+        @keyframes fadeIn {
+            /*animetion-nameで設定した値を書く*/
+
+            0% {
+                opacity: 0;
+            } /*アニメーション開始時は不透明度0%*/
+
+            100% {
+                opacity: 0.75;
+            } /*アニメーション終了時は不透明度100%*/
+        }
+    }

@@ -2,7 +2,7 @@
 .p-header_menu_btn{
     display: block;
     position: fixed;
-    top:12px;
+    top:20px;
     right: 13px;
     width: 42px;
     height: 42px;
@@ -31,6 +31,7 @@
     display: none;
 }
 &.is-open{
+    z-index: 5;
     span{
     &:nth-child(1){
         top:16px;

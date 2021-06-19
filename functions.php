@@ -11,7 +11,7 @@ function nagatarock_script(){
     add_action( 'wp_enqueue_scripts', 'nagatarock_script');
 
 //管理バーの非表示
-   // add_filter('show_admin_bar', '__return_false');
+    add_filter('show_admin_bar', '__return_false');
 
    function custom_theme_setup(){
        //head内にフィードリンクを出力
