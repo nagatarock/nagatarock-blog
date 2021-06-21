@@ -1,0 +1,47 @@
+.p-portfolio {
+    margin-top: 24px;
+    margin-bottom: 320px;
+    padding: 0 15%;
+    &__box {
+        margin-top: 44px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        &__thumb {
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            &__mask{
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+                transition: all 1s ease;
+            }
+            &__mask:hover{
+                opacity: 0.5;
+            }
+            .thumb__title{
+                font-size: 16px;
+                font-family: $font;
+                font-weight: bold;
+                position: absolute;
+                top: 50%;
+                left: 30%;
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+        &__thumb:hover{
+            transition: all 1s ease;
+            .thumb__title{
+                transition: all 1s ease;
+                opacity: 1;
+            }
+        }
+    }
+}
