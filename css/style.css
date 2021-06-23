@@ -389,6 +389,7 @@ hr {
   height: 3px;
   border: 0;
   margin: 0 auto 20px auto;
+  border-radius: 10px;
 }
 
 header {
@@ -1733,6 +1734,19 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
   padding: 0 15%;
 }
 
+@media (max-width: 640px) {
+  .p-portfolio {
+    margin-top: 80px;
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 641px) {
+  .p-portfolio {
+    padding: 0 5%;
+  }
+}
+
 .p-portfolio__box {
   margin-top: 44px;
   display: -ms-grid;
@@ -1740,6 +1754,18 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
+}
+
+@media (max-width: 640px) {
+  .p-portfolio__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .p-portfolio__box__thumb {
@@ -1752,6 +1778,20 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 .p-portfolio__box__thumb img {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 768px) and (min-width: 641px) {
+  .p-portfolio__box__thumb img {
+    -webkit-box-shadow: 1px 1px 5px black;
+            box-shadow: 1px 1px 5px black;
+  }
+}
+
+@media (max-width: 640px) {
+  .p-portfolio__box__thumb img {
+    -webkit-box-shadow: 1px 1px 5px black;
+            box-shadow: 1px 1px 5px black;
+  }
 }
 
 .p-portfolio__box__thumb__mask {
@@ -1770,9 +1810,12 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
   font-size: 16px;
   font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
   font-weight: bold;
+  text-shadow: 1px 1px 2px silver;
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   opacity: 0;
   pointer-events: none;
 }
@@ -1786,5 +1829,28 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   opacity: 1;
+}
+
+.p-blog {
+  margin-top: 24px;
+  margin-bottom: 320px;
+  padding: 0 15%;
+}
+
+@media (max-width: 640px) {
+  .p-blog {
+    margin-top: 80px;
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 641px) {
+  .p-blog {
+    padding: 0 5%;
+  }
+}
+
+.p-blog__box {
+  margin-top: 44px;
 }
 /*# sourceMappingURL=style.css.map */

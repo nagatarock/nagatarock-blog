@@ -79,7 +79,7 @@
 </section>
 <!-- ポートフォリオページ -->
 <section class="p-portfolio">
-<hr>
+    <hr>
     <div class="c-container_title">
         <h2>PORTFOLIO
         </h2>
@@ -95,21 +95,73 @@
         <?php if ($my_query->have_posts()) : ?>
             <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
                 <!-- ▽ ループ開始 ▽ -->
-                    <div class="p-portfolio__box__thumb">
+                <div class="p-portfolio__box__thumb">
                     <a href="<?php the_permalink(); ?>">
-                    <div class="p-portfolio__box__thumb__mask">
-                    <img src="<?php the_post_thumbnail('full',array("alt" => get_the_title()));?>
+                        <div class="p-portfolio__box__thumb__mask">
+                            <img src="<?php the_post_thumbnail('full', array("alt" => get_the_title())); ?>
                     </div>
-                    <div class="thumb__title">
-                    <h3><?php the_title(); ?></h3>
-                    </div>
+                    <div class=" thumb__title">
+                            <h3><?php the_title(); ?></h3>
+                        </div>
                     </a>
-                    </div>
+                </div>
             <?php endwhile; ?>
-        <?php else :?>
+        <?php else : ?>
             <p>まだ投稿がありません。</p>
         <?php endif;
         wp_reset_postdata(); ?>
+    </div>
+</section>
+<section class="p-blog">
+    <hr>
+    <div class="c-container_title">
+        <h2>BLOG
+        </h2>
+    </div>
+    <div class="p-blog__box">
+    <?php
+$args = array(
+'posts_per_page' => 5 // 表示件数
+);
+$posts = get_posts( $args );
+foreach ( $posts as $post ): // ループの開始
+setup_postdata( $post ); // 記事データの取得
+?>
+                        <a href="<?php the_permalink($post->ID); ?>">
+                    <article class="p-archive_container_left_box">
+                            <div class="c-archive_container_left_box_thumb">
+                                <?php if (has_post_thumbnail()) : //アイキャッチ画像があれば
+                                ?>
+                                    <?php the_post_thumbnail(
+                                        array(
+                                            'alt' => $post_title,
+                                        )
+                                    ) //画像を取得;
+                                    ?>
+                                <?php else : //アイキャッチ画像がなければ
+                                ?>
+                                    <img src="<?php echo esc_url(get_theme_file_uri('img/no-image.png')); ?>" alt="サムネイル画像はありません">
+                                <?php endif; ?>
+        </div>
+        <div class="p-archive_container_left_box_sentence">
+            <div class="c-archive_container_left_box_title">
+                <h3><?php the_title(); ?></h3>
+            </div>
+            <div class="c-date">
+            公開日:<?php echo get_the_date('Y/n/j'); ?>
+            <?php if(get_the_date('Y/n/j')
+            != get_the_modified_date('Y/n/j')):?>
+            最終更新日:<?php echo get_the_modified_date('Y/n/j'); ?>
+            <?php endif;?>                
+                <?php the_excerpt(); ?>
+            </div>
+        </div>
+        </article>
+        </a>
+        <?php
+endforeach; // ループの終了
+?>
+
     </div>
 </section>
 <hr>

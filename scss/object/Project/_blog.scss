@@ -1,0 +1,15 @@
+.p-blog{
+    margin-top: 24px;
+    margin-bottom: 320px;
+    padding: 0 15%;
+    @include breakpoint(sma) {
+        margin-top: 80px;
+        padding: 0 5%;
+    }
+    @include breakpoint(tab) {
+        padding: 0 5%;
+    }
+    &__box{
+        margin-top: 44px;
+    }
+}
