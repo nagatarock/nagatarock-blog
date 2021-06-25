@@ -119,51 +119,63 @@
         </h2>
     </div>
     <div class="p-blog__box">
-    <?php
-$args = array(
-'posts_per_page' => 5 // 表示件数
-);
-$posts = get_posts( $args );
-foreach ( $posts as $post ): // ループの開始
-setup_postdata( $post ); // 記事データの取得
-?>
-                        <a href="<?php the_permalink($post->ID); ?>">
-                    <article class="p-archive_container_left_box">
-                            <div class="c-archive_container_left_box_thumb">
-                                <?php if (has_post_thumbnail()) : //アイキャッチ画像があれば
-                                ?>
-                                    <?php the_post_thumbnail(
-                                        array(
-                                            'alt' => $post_title,
-                                        )
-                                    ) //画像を取得;
-                                    ?>
-                                <?php else : //アイキャッチ画像がなければ
-                                ?>
-                                    <img src="<?php echo esc_url(get_theme_file_uri('img/no-image.png')); ?>" alt="サムネイル画像はありません">
-                                <?php endif; ?>
-        </div>
-        <div class="p-archive_container_left_box_sentence">
-            <div class="c-archive_container_left_box_title">
-                <h3><?php the_title(); ?></h3>
-            </div>
-            <div class="c-date">
-            公開日:<?php echo get_the_date('Y/n/j'); ?>
-            <?php if(get_the_date('Y/n/j')
-            != get_the_modified_date('Y/n/j')):?>
-            最終更新日:<?php echo get_the_modified_date('Y/n/j'); ?>
-            <?php endif;?>                
-                <?php the_excerpt(); ?>
-            </div>
-        </div>
-        </article>
-        </a>
+        <!-- 投稿記事を表示 -->
         <?php
-endforeach; // ループの終了
-?>
+        $args = array(
+            'posts_per_page' => 5 // 表示件数
+        );
+        $posts = get_posts($args);
+        foreach ($posts as $post) : // ループの開始
+            setup_postdata($post); // 記事データの取得
+        ?>
+            <a href="<?php the_permalink($post->ID); ?>">
+                <article class="p-blog__box__post">
+                    <div class="post__thumbnail">
+                        <?php if (has_post_thumbnail()) : //アイキャッチ画像があれば
+                        ?>
+                            <?php the_post_thumbnail(
+                                array(
+                                    'alt' => $post_title,
+                                )
+                            ) //画像を取得;
+                            ?>
+                        <?php else : //アイキャッチ画像がなければ
+                        ?>
+                            <img src="<?php echo esc_url(get_theme_file_uri('img/no-image.png')); ?>" alt="サムネイル画像はありません">
+                        <?php endif; ?>
+                    </div>
+                    <div class="post__sentence">
+                        <div class="post__title">
+                            <h3><?php 
+                            if(mb_strlen($post->post_title, 'UTF-8')>15){
+                                $title= mb_substr($post->post_title, 0, 15, 'UTF-8');
+                                echo $title.'...';
+                                }else{
+                                echo $post->post_title;
+                                }
+                                ?></h3>
+                            <!-- タイトルの表示文字数を20文字以内に制限。越える場合は語尾に...を出力 -->
+                        </div>
 
+                        <div class="post-date">
+                            公開日:<?php echo get_the_date('Y/n/j'); ?>
+
+                        </div>
+                        <div class="post-content">
+                        <?php echo mb_substr(get_the_excerpt(), 0, 200);?>
+                        </div>           
+                    </div>
+                    <!-- 投稿記事の本文を抜粋。40文字までに設定。語尾に...を出力 -->
+                </article>
+            </a>
+        <?php
+        endforeach; // ループの終了
+        ?>
+    </div><!-- p-blog__box -->
+    <div class="c-more">
+    <h3><a href="<?php echo get_page_link('590'); ?>">read more</a></h3>
     </div>
-</section>
+</section> <!-- p-blog -->
 <hr>
 <?php get_footer(); ?>
 <?php wp_footer(); ?>
