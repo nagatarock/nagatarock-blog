@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <hr>
-<section class="l-archive_container">
+<section class="l-archive">
     <div class="c-container_title">
         <h2>
         <?php if($monthnum||$year||$cat){ ?>

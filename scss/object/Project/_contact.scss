@@ -1,4 +1,4 @@
-.p-contact{
+.p-contact {
     font-size: 1.5em;
     margin-bottom: 160px;
     padding: 0 15%;
@@ -10,28 +10,43 @@
         margin-bottom: 80px;
         padding: 0 5%;
     }
-    &__box{
+    &__box {
         margin-top: 20px;
         padding: 0 10%;
         @include breakpoint(sma) {
-            padding: 0 ;
+            padding: 0;
         }
         @include breakpoint(tab) {
-            padding: 0 ;
+            padding: 0;
         }
     }
-    input{
+}
+.mw_wp_form {
+    line-height: 24px;
+    span {
+        font-size: 14px;
+        padding: 2px 4px;
+        margin-left: 5px;
+        color: white;
+        background-color: red;
+        border-radius: 5px;
+    }
+    input {
         width: 30vw;
         border: 1px solid;
         border-radius: 0.4em;
         margin-bottom: 5px;
         padding-left: 5px;
     }
-    textarea{
+    textarea {
         width: 50vw;
         border: 1px solid;
         border-radius: 0.4em;
         margin-bottom: 10px;
         padding-left: 5px;
     }
+}
+// iPhoneの送信ボタンリセット
+.form input[type="submit"] {
+    -webkit-appearance: none;
 }

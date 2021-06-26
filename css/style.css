@@ -400,6 +400,10 @@ header {
   position: relative;
 }
 
+.l-archive {
+  margin-top: 77px;
+}
+
 .l-footer_title {
   text-align: center;
   margin-top: 5px;
@@ -1986,7 +1990,20 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
   }
 }
 
-.p-contact input {
+.mw_wp_form {
+  line-height: 24px;
+}
+
+.mw_wp_form span {
+  font-size: 14px;
+  padding: 2px 4px;
+  margin-left: 5px;
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.mw_wp_form input {
   width: 30vw;
   border: 1px solid;
   border-radius: 0.4em;
@@ -1994,11 +2011,15 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
   padding-left: 5px;
 }
 
-.p-contact textarea {
+.mw_wp_form textarea {
   width: 50vw;
   border: 1px solid;
   border-radius: 0.4em;
   margin-bottom: 10px;
   padding-left: 5px;
+}
+
+.form input[type="submit"] {
+  -webkit-appearance: none;
 }
 /*# sourceMappingURL=style.css.map */

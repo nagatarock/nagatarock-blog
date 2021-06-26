@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <hr>
 <section class="l-main">
-    <div class="p-main_visual">
+    <div id="top" class="p-main_visual">
         <img src="<?php bloginfo('template_url'); ?>/img/top<?php echo (rand(1, 3)); ?>.png" alt="トップページの風景の写真">
         <?php get_sidebar(); ?>
     </div>
@@ -9,7 +9,7 @@
 </section>
 
 <!-- プロフィールページ -->
-<section class="p-profile">
+<section id="profile" class="p-profile">
     <hr>
     <div class="c-container_title">
         <h2>PROFILE</h2>
@@ -73,7 +73,7 @@
 </section><!-- p-profile -->
 
 <!-- ポートフォリオページ -->
-<section class="p-portfolio">
+<section id="portfolio" class="p-portfolio">
     <hr>
     <div class="c-container_title">
         <h2>PORTFOLIO
@@ -174,7 +174,7 @@
 </section> <!-- p-blog -->
 
 <!-- コンタクトページ -->
-<section class="p-contact">
+<section id="contact" class="p-contact">
     <hr>
     <div class="c-container_title">
         <h2>CONTACT</h2>
