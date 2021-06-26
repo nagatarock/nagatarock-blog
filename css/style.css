@@ -1157,6 +1157,19 @@ header {
 .p-main_visual {
   position: relative;
   margin-top: 77px;
+  margin-bottom: 320px;
+}
+
+@media (max-width: 640px) {
+  .p-main_visual {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 641px) {
+  .p-main_visual {
+    margin-bottom: 160px;
+  }
 }
 
 .p-main_visual img {
@@ -1544,19 +1557,20 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 }
 
 .p-profile {
-  margin-top: 320px;
+  margin-bottom: 320px;
   padding: 0 15%;
 }
 
 @media (max-width: 640px) {
   .p-profile {
-    margin-top: 80px;
+    margin-bottom: 80px;
     padding: 0 5%;
   }
 }
 
 @media (max-width: 768px) and (min-width: 641px) {
   .p-profile {
+    margin-bottom: 160px;
     padding: 0 5%;
   }
 }
@@ -1691,10 +1705,6 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
   }
 }
 
-.p-profile__skills {
-  margin-bottom: 320px;
-}
-
 .p-profile__skills__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1729,20 +1739,20 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 }
 
 .p-portfolio {
-  margin-top: 24px;
   margin-bottom: 320px;
   padding: 0 15%;
 }
 
 @media (max-width: 640px) {
   .p-portfolio {
-    margin-top: 80px;
+    margin-bottom: 80px;
     padding: 0 5%;
   }
 }
 
 @media (max-width: 768px) and (min-width: 641px) {
   .p-portfolio {
+    margin-bottom: 160px;
     padding: 0 5%;
   }
 }
@@ -1834,20 +1844,20 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 }
 
 .p-blog {
-  margin-top: 24px;
   margin-bottom: 320px;
   padding: 0 15%;
 }
 
 @media (max-width: 640px) {
   .p-blog {
-    margin-top: 80px;
+    margin-bottom: 80px;
     padding: 0 5%;
   }
 }
 
 @media (max-width: 768px) and (min-width: 641px) {
   .p-blog {
+    margin-bottom: 160px;
     padding: 0 5%;
   }
 }
@@ -1859,15 +1869,20 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: max-content;
+      grid-template-rows: -webkit-max-content;
+      grid-template-rows: max-content;
   grid-gap: 40px;
 }
 
-.p-blog__box__post {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  max-height: 100%;
+@media (max-width: 640px) {
+  .p-blog__box {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.p-blog__box a {
   border-left: double 5px;
   border-right: double 5px;
   -webkit-box-shadow: 1px 0 4px rgba(0, 0, 0, 0.32);
@@ -1878,37 +1893,42 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
   transition: all 0.5s;
 }
 
+.p-blog__box a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 0.5;
+}
+
+.p-blog__box__post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-height: 200px;
+}
+
 .p-blog__box__post .post__thumbnail {
-  width: 50%;
-  height: 100%;
+  width: 40%;
 }
 
 .p-blog__box__post .post__thumbnail img {
   width: 100%;
-  height: 50%;
+  max-height: 100%;
 }
 
 .p-blog__box__post .post__sentence {
-  width: 50%;
-  height: 100%;
+  width: 60%;
   margin: 8px;
-  overflow: hidden;
 }
 
 .p-blog__box__post .post__sentence .post__title {
   margin-bottom: 10px;
-  text-align: center;
   font-size: 12px;
+  overflow: hidden;
 }
 
 .p-blog__box__post .post__sentence .post-date {
   margin-bottom: 8px;
-}
-
-.p-blog__box__post:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  opacity: 0.5;
 }
 
 .p-blog .c-more {
@@ -1927,5 +1947,58 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 .p-blog .c-more a:hover {
   font-size: 26px;
   opacity: 0.5;
+}
+
+.p-contact {
+  font-size: 1.5em;
+  margin-bottom: 160px;
+  padding: 0 15%;
+}
+
+@media (max-width: 640px) {
+  .p-contact {
+    margin-bottom: 40px;
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 641px) {
+  .p-contact {
+    margin-bottom: 80px;
+    padding: 0 5%;
+  }
+}
+
+.p-contact__box {
+  margin-top: 20px;
+  padding: 0 10%;
+}
+
+@media (max-width: 640px) {
+  .p-contact__box {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 641px) {
+  .p-contact__box {
+    padding: 0;
+  }
+}
+
+.p-contact input {
+  width: 30vw;
+  border: 1px solid;
+  border-radius: 0.4em;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+
+.p-contact textarea {
+  width: 50vw;
+  border: 1px solid;
+  border-radius: 0.4em;
+  margin-bottom: 10px;
+  padding-left: 5px;
 }
 /*# sourceMappingURL=style.css.map */

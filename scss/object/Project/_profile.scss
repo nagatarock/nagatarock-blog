@@ -1,11 +1,12 @@
 .p-profile {
-    margin-top: 320px;
+    margin-bottom: 320px;
     padding: 0 15%;
     @include breakpoint(sma) {
-        margin-top: 80px;
+        margin-bottom: 80px;
         padding: 0 5%;
     }
     @include breakpoint(tab) {
+        margin-bottom: 160px;
         padding: 0 5%;
     }
     &__box {
@@ -87,7 +88,6 @@
         }
     }
     &__skills {
-        margin-bottom: 320px;
         &__box {
             display: flex;
             justify-content: space-between;

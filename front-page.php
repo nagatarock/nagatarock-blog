@@ -7,16 +7,12 @@
     </div>
     <!--p-main_container-->
 </section>
+
 <!-- プロフィールページ -->
 <section class="p-profile">
     <hr>
     <div class="c-container_title">
-        <h2><?php
-            $page_obj = get_page_by_path('profile-2');
-            $page = get_post($page_obj);
-            echo $page->post_title;     //タイトルを表示
-            ?>
-        </h2>
+        <h2>PROFILE</h2>
     </div>
     <div class="p-profile__box">
         <div class="p-profile__box__self">
@@ -39,9 +35,7 @@
     </div>
     <div class="p-profile__skills">
         <div class="c-container_title">
-            <h2>
-                SKILLS
-            </h2>
+            <h2>SKILLS</h2>
         </div>
         <div class="p-profile__skills__box">
             <div class="c-skills__card">
@@ -76,7 +70,8 @@
             </div>
         </div>
     </div>
-</section>
+</section><!-- p-profile -->
+
 <!-- ポートフォリオページ -->
 <section class="p-portfolio">
     <hr>
@@ -111,18 +106,19 @@
         <?php endif;
         wp_reset_postdata(); ?>
     </div>
-</section>
+</section> <!-- p-portfolio -->
+
+<!-- ブログページ -->
 <section class="p-blog">
     <hr>
     <div class="c-container_title">
-        <h2>BLOG
-        </h2>
+        <h2>BLOG</h2>
     </div>
     <div class="p-blog__box">
         <!-- 投稿記事を表示 -->
         <?php
         $args = array(
-            'posts_per_page' => 5 // 表示件数
+            'posts_per_page' => 6 // 表示件数
         );
         $posts = get_posts($args);
         foreach ($posts as $post) : // ループの開始
@@ -146,12 +142,12 @@
                     </div>
                     <div class="post__sentence">
                         <div class="post__title">
-                            <h3><?php 
-                            if(mb_strlen($post->post_title, 'UTF-8')>15){
-                                $title= mb_substr($post->post_title, 0, 15, 'UTF-8');
-                                echo $title.'...';
-                                }else{
-                                echo $post->post_title;
+                            <h3><?php
+                                if (mb_strlen($post->post_title, 'UTF-8') > 20) {
+                                    $title = mb_substr($post->post_title, 0, 20, 'UTF-8');
+                                    echo $title . '...';
+                                } else {
+                                    echo $post->post_title;
                                 }
                                 ?></h3>
                             <!-- タイトルの表示文字数を20文字以内に制限。越える場合は語尾に...を出力 -->
@@ -162,10 +158,10 @@
 
                         </div>
                         <div class="post-content">
-                        <?php echo mb_substr(get_the_excerpt(), 0, 200);?>
-                        </div>           
+                            <?php echo mb_substr(get_the_excerpt(), 0, 200); ?>
+                        </div>
+                        <!-- 投稿記事の本文を抜粋。40文字までに設定。語尾に...を出力 -->
                     </div>
-                    <!-- 投稿記事の本文を抜粋。40文字までに設定。語尾に...を出力 -->
                 </article>
             </a>
         <?php
@@ -173,9 +169,22 @@
         ?>
     </div><!-- p-blog__box -->
     <div class="c-more">
-    <h3><a href="<?php echo get_page_link('590'); ?>">read more</a></h3>
+        <h3><a href="<?php echo get_page_link('590'); ?>">read more</a></h3>
     </div>
 </section> <!-- p-blog -->
+
+<!-- コンタクトページ -->
+<section class="p-contact">
+    <hr>
+    <div class="c-container_title">
+        <h2>CONTACT</h2>
+    </div>
+    <div class="p-contact__box">
+    <?php echo do_shortcode('[mwform_formkey key="575"]'); ?>
+    </div>
+</section>
+
+
 <hr>
 <?php get_footer(); ?>
 <?php wp_footer(); ?>
