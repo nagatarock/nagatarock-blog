@@ -8,6 +8,19 @@
     @include breakpoint(sma){
         margin-top: 20px;
     }
+    .c-custom__post__visual{
+        width: 100%;
+        height: 0;
+        padding-bottom: 75%;
+        margin: 0 auto;
+        position: relative;
+        img{
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+    }
     h1,h2,h3,h4,h5,h6{
         font-family: $font;
         margin-top: 10px;
