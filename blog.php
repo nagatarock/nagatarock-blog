@@ -87,7 +87,7 @@
     <hr>
     <section class="l-archive">
         <div class="c-container_title">
-            <h1><?php the_title(); ?></h1>
+            <h2><?php the_title(); ?></h2>
         </div>
         <div class="p-archive_container">
             <div class="p-archive_container_left" <?php post_class(); ?>>

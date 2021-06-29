@@ -1,0 +1,84 @@
+.p-custom__post__container{
+    margin-top: 40px;
+    border-right: double 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.32);/*影*/
+    border-color:#eee;
+    margin-bottom: 10px;
+    line-height: 40px;
+    @include breakpoint(sma){
+        margin-top: 20px;
+    }
+    h1,h2,h3,h4,h5,h6{
+        font-family: $font;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    h1{
+        font-size: 40px;
+        line-height: 50px;
+        width: 100%;
+        border-top: 4px solid;
+        border-bottom: 4px solid;
+        border-color: $main_color;
+        padding: 5px 5px 5px 10px;
+        @include breakpoint(sma){
+            font-size: 24px;
+            line-height: 28px;
+        }
+        @include breakpoint(tab){
+            font-size:32px;
+        }
+    }
+    h2{
+        font-size: 32px;
+        color: white;
+        background-color:$main_color;
+        width: 100%;
+        padding: 5px 5px 5px 10px;
+        @include breakpoint(sma){
+            font-size: 24px;
+            line-height: 28px;
+        }
+        @include breakpoint(tab){
+            font-size:28px;
+        }
+    }
+    h3{
+        font-size: 20px;
+        width: 50%;
+        border-bottom: 2px solid;
+        border-color: $main_color;
+        padding: 5px 5px 5px 10px;
+    }
+    h4{
+        font-size: 20px;
+        border-left: 5px double;
+        border-color: $main_color;
+        padding: 5px 5px 5px 5px;
+    }
+    h5{
+        font-size: 1.4rem;
+    }
+    h6{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 16px;
+        font-family: $font;
+        padding: 5px 5px 5px 10px;
+        line-height: 32px;
+    span{
+            font-size: 1em;
+        }
+    }
+    a{
+        text-decoration: underline;
+    }
+    a:hover{
+        color: gray;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
