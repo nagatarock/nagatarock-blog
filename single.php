@@ -98,7 +98,8 @@
                         else : ?>
                             <img src="<?php echo esc_url(get_theme_file_uri('img/no-thumbnail.png')); ?>" alt="サムネイル画像はありません">
                         <?php endif; ?>
-                        <div class="c-date">
+                    </div>
+                    <div class="c-date">
                             公開日:<?php echo get_the_date('Y/n/j'); ?>
                             <?php if (
                                 get_the_date('Y/n/j')
@@ -107,7 +108,6 @@
                                 最終更新日:<?php echo get_the_modified_date('Y/n/j'); ?>
                             <?php endif; ?>
                         </div>
-                    </div>
                 </div>
                 <div class="c-single_content">
                     <?php the_content(); ?>

@@ -417,6 +417,7 @@ header {
 
 .l-single_container {
   width: 100%;
+  margin-top: 117px;
 }
 
 .l-custom__post {
@@ -681,7 +682,6 @@ header {
 }
 
 .c-author_box {
-  width: 20vw;
   border-top: solid 2px;
   border-bottom: solid 2px;
   border-color: #eeeeee;
@@ -822,21 +822,23 @@ header {
 .c-single_thumbnail {
   width: 100%;
   height: 0;
-  padding-bottom: 75%;
-  margin: 0 auto;
+  padding-bottom: 53%;
   position: relative;
 }
 
 .c-single_thumbnail img {
   max-width: 100%;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
   position: absolute;
 }
 
 .c-single_title {
-  width: 45vw;
+  width: 80%;
   font-size: 1.5rem;
   margin: 0;
   position: absolute;
@@ -858,12 +860,14 @@ header {
 }
 
 .c-date {
-  font-size: 1vw;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 0;
 }
 
 @media (max-width: 640px) {
   .c-date {
-    font-size: 1.2rem;
+    font-size: 12px;
   }
 }
 
@@ -1504,8 +1508,28 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
   }
 }
 
+@media (max-width: 768px) and (min-width: 641px) {
+  .p-archive_container {
+    display: block;
+    width: 100%;
+  }
+  .p-archive_container_left {
+    width: 100%;
+  }
+  .p-archive_container_right {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 20px 0;
+  }
+}
+
 .p-single_container {
-  width: 90%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1516,14 +1540,35 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 }
 
 .p-single_container_left {
-  width: 75%;
+  width: 70%;
 }
 
 .p-single_container_right {
-  width: 15%;
+  width: 30%;
+  padding-left: 5%;
 }
 
 @media (max-width: 640px) {
+  .p-single_container {
+    display: block;
+    width: 100%;
+  }
+  .p-single_container_left {
+    width: 100%;
+  }
+  .p-single_container_right {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 641px) {
   .p-single_container {
     display: block;
     width: 100%;
@@ -1612,7 +1657,6 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 
 .p-single_title {
   position: relative;
-  margin: 1%;
 }
 
 .p-profile {
@@ -1841,7 +1885,7 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
   margin: 0 auto;
   width: 100%;
   height: 0;
-  padding-bottom: 75%;
+  padding-bottom: 53%;
   position: relative;
 }
 
@@ -1898,6 +1942,34 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
           transform: translate(-50%, -50%);
   opacity: 0;
   pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .p-portfolio__box__thumb .thumb__title {
+    font-size: 12px;
+    font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-shadow: 0px 0px 2px #fff, 4px 4px 2px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 641px) {
+  .p-portfolio__box__thumb .thumb__title {
+    font-size: 12px;
+    font-family: a-otf-ud-shin-maru-go-pr6n, sans-serif;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-shadow: 0px 0px 2px #fff, 4px 4px 2px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
 }
 
 .p-portfolio__box__thumb:hover {
@@ -2107,7 +2179,7 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 .p-custom__post__container .c-custom__post__visual {
   width: 100%;
   height: 0;
-  padding-bottom: 75%;
+  padding-bottom: 53%;
   margin: 0 auto;
   position: relative;
 }
