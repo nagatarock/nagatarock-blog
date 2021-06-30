@@ -529,6 +529,12 @@ header {
   }
 }
 
+@media (max-width: 768px) and (min-width: 641px) {
+  .c-hamburger_menu {
+    font-size: 40px;
+  }
+}
+
 .c-container_title h1 {
   font-size: 5vw;
   white-space: nowrap;

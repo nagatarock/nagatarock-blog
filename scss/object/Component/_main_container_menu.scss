@@ -45,4 +45,7 @@
     @include breakpoint(pc) {
         display: none;
     }
+    @include breakpoint(tab) {
+        font-size: 40px;
+    }
 }
