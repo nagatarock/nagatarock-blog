@@ -2,7 +2,7 @@
 <hr>
 <section class="l-main">
     <div id="top" class="p-main_visual">
-        <img src="<?php bloginfo('template_url'); ?>/img/top<?php echo (rand(1, 3)); ?>.png" alt="トップページの風景の写真">
+        <img src="<?php bloginfo('template_url'); ?>/img/top<?php echo (rand(1, 5)); ?>.png" alt="トップページの風景の写真">
         <?php get_sidebar(); ?>
     </div>
     <!--p-main_container-->
@@ -95,7 +95,7 @@
                         <div class="p-portfolio__box__thumb__mask">
                             <img src="<?php the_post_thumbnail('full', array("alt" => get_the_title())); ?>
                     </div>
-                    <div class=" thumb__title">
+                    <div class="thumb__title" >
                             <h3><?php the_title(); ?></h3>
                         </div>
                     </a>

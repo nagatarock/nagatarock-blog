@@ -16,7 +16,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nagatarock-blog</title>
+    <title>ナガタロックブログ|RaiseTechで学び副業で稼ぐ</title>
     <?php wp_head(); ?>
     <link rel="shortcut icon" href="https://nagatarockblog.com/wp-content/uploads/2021/02/favicon.ico">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
@@ -110,7 +110,7 @@
             <?php if (empty($ctm)) : ?>
             <?php else : ?>
             <h4>URL</h4>
-            <p><a href="<?php echo $field_value['url']; ?>" target="_blank" rel="noopener noreferrer">サイトを見てみる</a></p>
+            <p><a href="<?php the_field('url'); ?>" target="_blank" rel="noopener noreferrer">サイトを見てみる</a></p>
             <?php endif; ?>
             <!-- urlの入力がある場合のみ表示する -->
             <?php the_content(); ?>

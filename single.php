@@ -22,7 +22,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nagatarock-blog</title>
+    <title>ナガタロックブログ|RaiseTechで学び副業で稼ぐ</title>
     <?php wp_head(); ?>
     <link rel="shortcut icon" href="https://nagatarockblog.com/wp-content/uploads/2021/02/favicon.ico">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
