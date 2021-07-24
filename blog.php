@@ -26,6 +26,8 @@
     <?php wp_head(); ?>
     <link rel="shortcut icon" href="https://nagatarockblog.com/wp-content/uploads/2021/02/favicon.ico">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9446338230066955"
+     crossorigin="anonymous"></script>
     <script>
         (function(d) {
             var config = {
