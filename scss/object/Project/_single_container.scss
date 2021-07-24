@@ -13,6 +13,7 @@
     @include breakpoint (sma){
         display: block;
         width: 100%;
+        padding: 0;
         &_left{
             width: 100%;
         }

@@ -1551,6 +1551,7 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
   .p-single_container {
     display: block;
     width: 100%;
+    padding: 0;
   }
   .p-single_container_left {
     width: 100%;
