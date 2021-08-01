@@ -1,0 +1,33 @@
+.p-main_nav {
+    a {
+        background-color: rgba(0, 0, 0, 0); /* for IE9 */
+        overflow: hidden;
+        position: absolute;
+        top: 340px;
+        left: 50%;
+        width: 72px;
+        height: 72px;
+    }
+    .prev {
+        margin-left: -480px;
+    }
+    .prev:before {
+        margin-top: -20px;
+    }
+    .next {
+        margin-left: 408px;
+    }
+    .next:before {
+        margin-left: -80px;
+        margin-top: -20px;
+    }
+    .disabled{
+        display: none;
+    }
+    a:before {
+        content: url("../img/sprites.png");
+        display: inline-block;
+        font-size: 0;
+        line-height: 0;
+    }
+}

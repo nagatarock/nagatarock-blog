@@ -398,6 +398,8 @@ header {
 
 .l-main {
   position: relative;
+  height: 680px;
+  padding-top: 80px;
 }
 
 .l-archive {
@@ -1217,9 +1219,9 @@ header {
 }
 
 .p-main_visual {
-  position: relative;
-  margin-top: 77px;
-  margin-bottom: 320px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 640px) {
@@ -1234,9 +1236,11 @@ header {
   }
 }
 
-.p-main_visual img {
+.p-main_visual .c-top img {
   width: 100%;
   height: 600px;
+  position: absolute;
+  overflow: hidden;
   opacity: 0.75;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1245,7 +1249,7 @@ header {
 }
 
 @media (max-width: 640px) {
-  .p-main_visual img {
+  .p-main_visual .c-top img {
     height: 300px;
   }
 }
@@ -1660,6 +1664,7 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 }
 
 .p-profile {
+  margin-top: 320px;
   margin-bottom: 320px;
   padding: 0 15%;
 }
@@ -2286,5 +2291,80 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 .p-custom__post__container img {
   max-width: 100%;
   height: auto;
+}
+
+.p-main_nav a {
+  background-color: rgba(0, 0, 0, 0);
+  /* for IE9 */
+  overflow: hidden;
+  position: absolute;
+  top: 340px;
+  left: 50%;
+  width: 72px;
+  height: 72px;
+}
+
+.p-main_nav .prev {
+  margin-left: -480px;
+}
+
+.p-main_nav .prev:before {
+  margin-top: -20px;
+}
+
+.p-main_nav .next {
+  margin-left: 408px;
+}
+
+.p-main_nav .next:before {
+  margin-left: -80px;
+  margin-top: -20px;
+}
+
+.p-main_nav .disabled {
+  display: none;
+}
+
+.p-main_nav a:before {
+  content: url("../img/sprites.png");
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+}
+
+.p-main_indicator {
+  bottom: 30px;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.p-main_indicator a {
+  background-color: rgba(0, 0, 0, 0);
+  /* for IE9 */
+  overflow: hidden;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.p-main_indicator .active {
+  cursor: default;
+}
+
+.p-main_indicator .active:before {
+  margin-left: -130px;
+}
+
+.p-main_indicator a:before {
+  margin-left: -110px;
+  content: url("../img/sprites.png");
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
 }
 /*# sourceMappingURL=style.css.map */

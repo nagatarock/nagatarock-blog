@@ -1,0 +1,30 @@
+.p-main_indicator {
+    bottom: 30px;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    a {
+        background-color: rgba(0, 0, 0, 0); /* for IE9 */
+        overflow: hidden;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    .active {
+        cursor: default;
+    }
+    .active:before {
+        margin-left: -130px;
+    }
+    a:before {
+        margin-left: -110px;
+        content: url("../img/sprites.png");
+        display: inline-block;
+        font-size: 0;
+        line-height: 0;
+    }
+}

@@ -1,11 +1,18 @@
 <?php get_header(); ?>
-<hr>
 <section class="l-main">
     <div id="top" class="p-main_visual">
-        <img src="<?php bloginfo('template_url'); ?>/img/top<?php echo (rand(1, 5)); ?>.png" alt="トップページの風景の写真">
+        <div class="c-top"><img src="<?php bloginfo('template_url'); ?>/img/top1.png" alt="トップページの風景の写真"></div>
+        <div class="c-top"><img src="<?php bloginfo('template_url'); ?>/img/top2.png" alt="トップページの風景の写真"></div>
+        <div class="c-top"><img src="<?php bloginfo('template_url'); ?>/img/top3.png" alt="トップページの風景の写真"></div>
+        <div class="c-top"><img src="<?php bloginfo('template_url'); ?>/img/top4.png" alt="トップページの風景の写真"></div>
+        <div class="c-top"><img src="<?php bloginfo('template_url'); ?>/img/top5.png" alt="トップページの風景の写真"></div>
         <?php get_sidebar(); ?>
     </div>
-    <!--p-main_container-->
+    <div class="p-main_nav">
+        <a href="#" class="prev">Prev</a>
+        <a href="#" class="next">Next</a>
+    </div>
+    <div class="p-main_indicator"></div>
 </section>
 
 <!-- プロフィールページ -->
@@ -95,7 +102,7 @@
                         <div class="p-portfolio__box__thumb__mask">
                             <img src="<?php the_post_thumbnail('full', array("alt" => get_the_title())); ?>
                     </div>
-                    <div class="thumb__title" >
+                    <div class=" thumb__title">
                             <h3><?php the_title(); ?></h3>
                         </div>
                     </a>
@@ -180,7 +187,7 @@
         <h2>CONTACT</h2>
     </div>
     <div class="p-contact__box">
-    <?php echo do_shortcode('[mwform_formkey key="575"]'); ?>
+        <?php echo do_shortcode('[mwform_formkey key="575"]'); ?>
     </div>
 </section>
 
