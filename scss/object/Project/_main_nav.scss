@@ -1,27 +1,44 @@
 .p-main_nav {
+    display: flex;
+    justify-content: space-between;
     a {
         background-color: rgba(0, 0, 0, 0); /* for IE9 */
         overflow: hidden;
         position: absolute;
-        top: 340px;
-        left: 50%;
+        top: 420px;
+        left: calc( 50% - 36px );
         width: 72px;
         height: 72px;
+        @include breakpoint(sma) {
+            top: 200px;
+        }
     }
     .prev {
-        margin-left: -480px;
+        margin-left: -40%;
+        @include breakpoint(sma) {
+            -moz-transform: scale(0.5, 0.5);
+            -webkit-transform: scale(0.5, 0.5);
+            -o-transform: scale(0.5, 0.5);
+            -ms-transform: scale(0.5, 0.5);
+        }
     }
     .prev:before {
         margin-top: -20px;
     }
     .next {
-        margin-left: 408px;
+        margin-left: 40%;
+        @include breakpoint(sma) {
+            -moz-transform: scale(0.5, 0.5);
+            -webkit-transform: scale(0.5, 0.5);
+            -o-transform: scale(0.5, 0.5);
+            -ms-transform: scale(0.5, 0.5);
+        }
     }
     .next:before {
         margin-left: -80px;
         margin-top: -20px;
     }
-    .disabled{
+    .disabled {
         display: none;
     }
     a:before {

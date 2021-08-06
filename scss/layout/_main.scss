@@ -2,4 +2,9 @@
     position: relative;
     height: 680px;
     padding-top: 80px;
+    @include breakpoint(sma) {
+        height: auto;
+    }
+    @include breakpoint(tab) {
+    }
 }

@@ -402,6 +402,12 @@ header {
   padding-top: 80px;
 }
 
+@media (max-width: 640px) {
+  .l-main {
+    height: auto;
+  }
+}
+
 .l-archive {
   margin-top: 77px;
 }
@@ -1238,7 +1244,7 @@ header {
 
 .p-main_visual .c-top img {
   width: 100%;
-  height: 600px;
+  height: 680px;
   position: absolute;
   overflow: hidden;
   opacity: 0.75;
@@ -2293,19 +2299,43 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
   height: auto;
 }
 
+.p-main_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .p-main_nav a {
   background-color: rgba(0, 0, 0, 0);
   /* for IE9 */
   overflow: hidden;
   position: absolute;
-  top: 340px;
-  left: 50%;
+  top: 420px;
+  left: calc( 50% - 36px);
   width: 72px;
   height: 72px;
 }
 
+@media (max-width: 640px) {
+  .p-main_nav a {
+    top: 200px;
+  }
+}
+
 .p-main_nav .prev {
-  margin-left: -480px;
+  margin-left: -40%;
+}
+
+@media (max-width: 640px) {
+  .p-main_nav .prev {
+    -moz-transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+  }
 }
 
 .p-main_nav .prev:before {
@@ -2313,7 +2343,16 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 }
 
 .p-main_nav .next {
-  margin-left: 408px;
+  margin-left: 40%;
+}
+
+@media (max-width: 640px) {
+  .p-main_nav .next {
+    -moz-transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+  }
 }
 
 .p-main_nav .next:before {
@@ -2333,12 +2372,18 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 }
 
 .p-main_indicator {
-  bottom: 30px;
+  bottom: -50px;
   height: 16px;
   left: 0;
   position: absolute;
   right: 0;
   text-align: center;
+}
+
+@media (max-width: 640px) {
+  .p-main_indicator {
+    bottom: -290px;
+  }
 }
 
 .p-main_indicator a {

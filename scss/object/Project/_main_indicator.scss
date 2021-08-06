@@ -1,10 +1,13 @@
 .p-main_indicator {
-    bottom: 30px;
+    bottom: -50px;
     height: 16px;
     left: 0;
     position: absolute;
     right: 0;
     text-align: center;
+    @include breakpoint(sma) {
+        bottom: -290px;
+    }
     a {
         background-color: rgba(0, 0, 0, 0); /* for IE9 */
         overflow: hidden;

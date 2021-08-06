@@ -6,7 +6,6 @@
         <div class="c-top"><img src="<?php bloginfo('template_url'); ?>/img/top3.png" alt="トップページの風景の写真"></div>
         <div class="c-top"><img src="<?php bloginfo('template_url'); ?>/img/top4.png" alt="トップページの風景の写真"></div>
         <div class="c-top"><img src="<?php bloginfo('template_url'); ?>/img/top5.png" alt="トップページの風景の写真"></div>
-        <?php get_sidebar(); ?>
     </div>
     <div class="p-main_nav">
         <a href="#" class="prev">Prev</a>
@@ -14,7 +13,7 @@
     </div>
     <div class="p-main_indicator"></div>
 </section>
-
+<?php get_sidebar(); ?>
 <!-- プロフィールページ -->
 <section id="profile" class="p-profile">
     <hr>
