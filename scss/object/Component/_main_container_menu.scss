@@ -4,6 +4,7 @@
     font-family: $title_font;
     text-align: center;
     position: fixed;
+    overflow: hidden;
     top: 25%;
     transition: 0.5s; //ハンバーガーボタンを押した時のメニューの表示
     opacity: 0;

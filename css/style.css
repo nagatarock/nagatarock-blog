@@ -378,6 +378,10 @@ html {
   font-size: 62.5%;
 }
 
+html body {
+  max-width: 1440px;
+}
+
 html a {
   text-decoration: none;
   cursor: pointer;
@@ -398,13 +402,14 @@ header {
 
 .l-main {
   position: relative;
-  height: 680px;
+  height: 760px;
   padding-top: 80px;
+  overflow: hidden;
 }
 
 @media (max-width: 640px) {
   .l-main {
-    height: auto;
+    height: 380px;
   }
 }
 
@@ -479,6 +484,7 @@ header {
   font-family: "Amatic SC", cursive;
   text-align: center;
   position: fixed;
+  overflow: hidden;
   top: 25%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1677,6 +1683,7 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 
 @media (max-width: 640px) {
   .p-profile {
+    margin-top: 80px;
     margin-bottom: 80px;
     padding: 0 5%;
   }
@@ -2372,18 +2379,12 @@ _::-webkit-full-page-media, _:future, :root .p-page_container_right_container_bo
 }
 
 .p-main_indicator {
-  bottom: -50px;
+  bottom: 20px;
   height: 16px;
   left: 0;
   position: absolute;
   right: 0;
   text-align: center;
-}
-
-@media (max-width: 640px) {
-  .p-main_indicator {
-    bottom: -290px;
-  }
 }
 
 .p-main_indicator a {

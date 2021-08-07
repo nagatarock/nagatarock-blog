@@ -1,9 +1,10 @@
 .l-main{
     position: relative;
-    height: 680px;
+    height: 760px;
     padding-top: 80px;
+    overflow: hidden;
     @include breakpoint(sma) {
-        height: auto;
+        height: 380px;
     }
     @include breakpoint(tab) {
     }

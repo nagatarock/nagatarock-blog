@@ -12,8 +12,8 @@
         <a href="#" class="next">Next</a>
     </div>
     <div class="p-main_indicator"></div>
+    <?php get_sidebar(); ?>
 </section>
-<?php get_sidebar(); ?>
 <!-- プロフィールページ -->
 <section id="profile" class="p-profile">
     <hr>
